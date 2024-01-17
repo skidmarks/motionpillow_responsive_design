@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Pillow :: motion system & motion pillow</title>
+
+    <meta property="og:title" content="motionpillow">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="http://tdes.tenminds.com/mp_ces/images/ces/motionpillow.jpg">
+    
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />  
+    <!-- <link rel="stylesheet" href="/css/ces_design.css"> -->
+    <link rel="stylesheet" href="/css/ces_design.css">
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>   
+    <script src="/js/noframework.waypoints.js"></script>
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>    
+    <script src="/js/design.js"></script>
+    
+    <script src="/js/lib/jquery.form.min.js" type="text/javascript"></script>
+    <script src="/js/common.js" type="text/javascript"></script>  
+
+</head>
+<body>
+
+    <div class="mp_ces_wrap">
+        <div class="inner">
+
+            <div class="top_utils show" style="display:none;">
+                <a href="#" class="logo_s"><img src="/images/ces/logo_s.png" alt="motion pillow - motion system & motion pillow"></a>
+                <div class="side_m">
+                    <span class="lang" style="visibility:hidden;">
+                        <em class="chosed">EN</em>
+                        <i></i>
+                        <a href="/kor/home.do">KR</a>
+                    </span>
+                    <div class="icon nav-icon-5 menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="top_utils_web">
+                <a href="#" class="logo_s"><img src="/images/ces/logo_s.png" alt="motion pillow - motion system & motion pillow"></a>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">Story</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Key Features</a></li>
+                        <li><a href="#">App</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Donwload Press Release</a></li>
+                    </ul>
+                    <div>
+                        <a href="#">EN ver</a>
+                        <a href="#">KR ver</a>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- SECTION INTRO -->
+            <section class="intro">
+                <div class="intro_inner">
+                    <div class="player_box">
+                        <div id="player"></div>
+                        <div class="player_cover"></div>
+                    </div>
+                    <div class="text_layer">
+                        <div class="text_area">
+                        	<span>New Generation of Pillows Emerges</span>
+                            <h2>
+                                From Motion <br>
+                                To Health 
+                            </h2>
+                            <p><a href="#" target="_blank">Buy Now</a></p>
+                        </div>
+                    </div>
+                </div><!--/intro-->
+                <!-- <div class="logo_layer"><img src="/images/ces/logo.png" alt=""></div> -->
+            </section> 
+
+            <script src="https://www.youtube.com/player_api"></script>
+
+            <script>
+                // youtube player
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                        width: '350%',
+                        height: '350%',
+                        // videoId: 'TIxVNaROPe0',
+                        //videoId: 'fEiJn4LlgAs',
+                        videoId: 'GEVroCUa1R0',
+                        playerVars: { 
+                            'autoplay': 1,
+                            'playsinline': 1,
+                            'controls': 0,
+                            'frameborder': 0,
+                            'modestbranding': 1
+                        },
+                        events: {
+                            'onReady': onPlayerReady
+                        }
+                    });
+                }
+
+                function onPlayerReady(e) {
+                    e.target.mute();
+                    e.target.playVideo();
+                    e.target.setPlaybackQuality('hd1080');
+                    setInterval(function() {
+                        player.seekTo(0);
+                    }, 15000);
+                }
+
+                var playerCover = document.querySelector('.player_cover');
+                playerCover.addEventListener('click', function() {
+                    if(player.isMuted()) {
+                        player.unMute();
+                        this.classList.add('on');
+                    } else {
+                        player.mute();
+                        this.classList.remove('on');
+                    }                          
+                });                
+            </script>
+            
+            <section id="awrads">
+                <h2><img src="/images/ces/achieve/tit_awards.png" alt="Awards and Achievements"></h2>
+
+                <div class="awards_slide_wrap">
+                    <div class="awards_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_01.png" alt="2024 CES Best of Innovation Award"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_02.png" alt="2024 CES Innovation Award"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_03.png" alt="2023 CES Innovation Award"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_04.png" alt="2022 CES Innovation Award"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_05.png" alt="2020 CES Innovation Award"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_06.png" alt="2022 IDEA Design Award"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_07.png" alt="2021 IF Design Award"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_08.png" alt="GERMAN INNOVATION AWARD '20 WINNER"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/award_09.png" alt="GERMAN INNOVATION AWARD '22 WINNER"></div>
+                        </div>
+                    </div>
+                </div><!--/awards_slide_wrap-->                
+            </section>
+
+            <section id="story">
+                <h2><img src="/images/ces/story/story_tit_01.png" alt="Tired days made by Uncomfortable Nights"></h2>
+                <div class="inner">
+                    <p><img src="/images/ces/story/story_card_01.png" alt="What a full blask concert all night long"><span><img src="/images/ces/story/story_motion_01.gif" alt=""></span></p>
+                    <p><img src="/images/ces/story/story_card_02.png" alt="Can't we sleep together?"><span><img src="/images/ces/story/story_motion_02.gif" alt=""></span></p>
+                    <p><img src="/images/ces/story/story_card_03.png" alt="6 roommates and my snoring"><span><img src="/images/ces/story/story_motion_03.gif" alt=""></span></p>
+                    <h2><img src="/images/ces/story/story_tit_02.png" alt="People who want conformable sleep"></h2>
+                </div><!--/inner-->
+                <div class="story_slide_wrap">
+                    <div class="story_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="each_story"><img src="/images/ces/story/story_slide_01.png" alt="Even if it's just for an hour, I want to get some deep sleep.">
+                                <img class="story_graph" src="/images/ces/story/story_graph_01.gif" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="each_story"><img src="/images/ces/story/story_slide_02.png" alt="Rather than paying for coffee every morning, I want to buy an night of comfortable sleep."><img class="story_graph" src="/images/ces/story/story_graph_02.gif" alt=""></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="each_story"><img src="/images/ces/story/story_slide_03.png" alt="My whole body is aching. What happens when you don't get enough sleep?"></div>
+                                
+                            </div>
+                        </div>
+    
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div><!--/story_slide_wrap-->
+            </section><!--/#story-->
+
+            <section id="motion_system">
+                <div>
+                    <img src="/images/ces/system/system_hero.jpg" alt="The Easiest Way to a Quiet Night with Motion Pillow">
+                    <a href="https://www.10minds.com/shop/shopdetail.html?branduid=11224453&xcode=024&mcode=004&scode=&type=Y&sort=order&cur_code=024004&GfDT=bm98W1w%3D" target="_blank"><img src="/images/ces/system/btn_buy_now.png" alt="buy now"></a>
+                    <!-- <a href="/en/contact.do" target="_blank"><img src="/images/ces/system/btn_contact_us.png" alt="Contact Us"></a> -->
+                </div>
+                <div><img src="/images/ces/system/system_cont.jpg" alt="Simply just lie down"></div>
+                <div><img src="/images/ces/system/system_cont_02.gif" alt="Learning..."></div>
+            </section>
+            <section id="how_works">
+                <div class="inner">
+                    <h2><img src="/images/ces/works/how_works_tit.png" alt="How it Works"></h2>
+                </div>
+                <div class="works_slide_wrap">
+                    <div class="works_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/images/ces/works/works_slide_01.png" alt="STEP1. Motion System Detects Snoring"><span><img src="/images/ces/works/works_motion_01.gif" alt=""></span></div>
+                            <div class="swiper-slide"><img src="/images/ces/works/works_slide_02.png" alt="STEP2. Airbags Slowly Inflate"><span><img src="/images/ces/works/works_motion_02.gif" alt=""></span></div>
+                            <div class="swiper-slide"><img src="/images/ces/works/works_slide_03.png" alt="STEP3. Opens the Airway to Reduce Snoring"><span><img src="/images/ces/works/works_motion_03.gif" alt=""></span></div>
+                            <div class="swiper-slide"><img src="/images/ces/works/works_slide_04.png" alt="STEP4. Start Motino Pillow for a Happier Life"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div><!--/story_slide_wrap-->
+            </section>
+            <section id="key_feature"> 
+                <h2><img src="/images/ces/features/key_feature_01.png" alt="Key features"></h2>
+                <div><img src="/images/ces/features/key_feature_02.png" alt="Motion System - AI learning System, Low Noise Design, Easy Operation"></div>
+                <div><img src="/images/ces/features/key_feature_03.png" alt="Motion Pillow - Non-invasive, Electromagnetic Wave ZERO, High Quality Pillow"></div>
+            </section>
+            <section id="app_info">
+                <h2><img src="/images/ces/app_info/app_info_01.png" alt="App for your Convenience, Check Your Sleep Data">
+                    <span>
+                        <a href="https://apps.apple.com/us/app/motion-pillow-system/id6451222188" target="_blank"><img src="/images/ces/app_info/btn_app_store.png" alt="App Store"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.tenminds.mp1plus.local"><img src="/images/ces/app_info/btn_google_play.png" target="_blank" alt="Google Play"></a>
+                    </span>
+                </h2>
+                <div class="apps_slide_wrap">
+                    <div class="apps_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide altS"><img src="/images/ces/app_info/app_info_img_01.png" alt="Statistics"></div>
+                            <div class="swiper-slide"><img src="/images/ces/app_info/app_info_img_02.png" alt="Sleep time"></div>
+                            <div class="swiper-slide"><img src="/images/ces/app_info/app_info_img_03.png" alt="Good Sleep Score"></div>
+                            <div class="swiper-slide"><img src="/images/ces/app_info/app_info_img_04.png" alt="Snoring time"></div>
+                        </div>
+                    </div>
+                </div><!--/story_slide_wrap-->   
+                <p class="snore_record">
+                    <img src="/images/ces/app_info/app_info_02.png" alt="Record Your Snoring">
+                    <img src="/images/ces/app_info/app_info_ani.gif" alt="snoring record" class="s_cord" />
+                </p>            
+                <p style="padding:0 7% 20%;"><img src="/images/ces/app_info/app_info_03.gif" alt="Adjust Pillow Height"></p>                    
+            </section>
+
+            <section id="device_pillows">
+
+                <h2><img src="/images/ces/device_pillow/device_pillow_tit.png" alt="Hygiene and Aesthetics"></h2>
+
+                <div class="inner">
+                    <!-- 필로우 색상 선택기 -->
+                    <div id="pillowSelection">
+                        <h3><img src="/images/ces/device_pillow/dp_sub_01.png" alt="Motion Pillow Cover"></h3> 
+                        <div class="select_form_wrap">
+                            <div class="select_panel">
+                                <img src="/images/ces/pillows/BrightWhite.png" alt="브라이트화이트">
+                            </div>
+                            <div class="selector_list">
+                                <ul>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle BrightWhite"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Bright White</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle SandBeige"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Sand Beige</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle SunYellow"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Sun Yellow</span>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle ForestGreen"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Forest Green</span>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle WinterSky"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Winter Sky</span>
+                                        </div>
+                                    </li>            
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle DryRose"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Dry Rose</span>
+                                        </div>
+                                    </li>                                                                                                                                   
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle DarkGray"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Dark Gray</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--/select_form_wrap-->
+                    </div><!--/pillowSelection-->
+
+                    <!-- 기기 색상 선택기 -->
+                    <div id="deviceSelection">
+
+                        <h3><img src="/images/ces/device_pillow/dp_sub_02.png" alt="Motion System Cover"></h3>
+
+                        <div class="select_form_wrap">
+                            <div class="select_panel">
+                                <img src="/images/ces/device/CoolGray.png" alt="Emerald Green">
+                            </div>
+                            <div class="selector_list">
+                                <ul>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle SandBeige"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                             <span>Sand Beige</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle TanBrown"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Tan Brown</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle MellowYellow"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Mellow Yellow</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle EmeraldGreen"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Emerald Green</span>
+                                        </div>
+                                    </li>                                    
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle CloudBlue"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Cloud Blue</span>
+                                        </div>
+                                    </li>                                    
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle LilacViolet"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Lilac Violet</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="selector_circle">
+                                            <span class="color_circle CoolGray"></span>
+                                        </div>
+                                        <div class="selector_txt">
+                                            <span>Cool Gray</span>
+                                        </div>
+                                    </li>                                 
+                                </ul>
+                            </div>
+                        </div><!--/select_form_wrap-->
+                    </div><!--/pillowSelection-->
+                </div>          
+            </section>
+
+            <section id="achievements">
+                <h2><img src="/images/ces/achieve/achieve_tit.png" alt="Clinically Tested Results"></h2>
+                <div class="inner">
+                    <p><img src="/images/ces/achieve/achieve_img_01.png" alt="93.7% of participants showed reduction in snoring after using Motion Pillow"></p>
+                    <p><img src="/images/ces/achieve/achieve_img_02.gif" alt="44.4% decrease in the snoring time during the hours of sleep after using Motion Pillow"></p>
+                </div>
+                <div><img src="/images/ces/achieve/snoring.gif" alt="snoring images"></div>
+                <!-- <h2><img src="/images/ces/achieve/win_tit.png" alt="Recognized Innovative Value & Technology"></h2>
+                <div><img src="/images/ces/achieve/achieve_img_03.png" alt="CES Innovation Award, German Innovation Award, iF/IDEA Design Award, Certified materials for cleanliness and hygiene"></div> -->
+                <h3><img src="/images/ces/achieve/achieve_stit_01.png" alt="Media Coverage    "></h3>
+                <div class="voice_slide_wrap">
+                    <div class="voice_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="https://www.forbes.com/sites/tiriasresearch/2023/01/05/first-peek-at-ces-2023/?sh=aa3913a5866a"><img src="/images/ces/achieve/voice_01.png" alt="First Peek At CES 2023"></a></div>
+                            <div class="swiper-slide"><a href="https://futurism.com/the-byte/startup-pillow-detects-snoring-automatically-adjusts-head"><img src="/images/ces/achieve/voice_02.png" alt="STARTUP SHOWS OFF PILLOW THAT DETECTS SNORING AND AUTOMATICALLY ADJUSTS YOUR HEAD"></a></div>
+                            <div class="swiper-slide"><a href="https://nypost.com/2023/01/05/ces-conference-debuts-high-tech-gadgets-focusing-on-wellness/"><img src="/images/ces/achieve/voice_03.png" alt="CES conference debuts high-tech gadgets focusing on personal health"></a></div>
+                            <div class="swiper-slide"><a href="https://learningenglish.voanews.com/a/hot-technology-products-at-ces-2020/5237381.html"><img src="/images/ces/achieve/voice_04.png" alt="10 Hot Technology Products at CES 2020"></a></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div><!--/voice_slide_wrap-->                                     
+                <h3><img src="/images/ces/achieve/achieve_stit_02.png" alt="Customer Reviews"></h3>  
+                <div class="review_slide_wrap">
+                    <div class="review_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/images/ces/achieve/review_01.png" alt="He's not snoring!"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/review_02.png" alt="It's a miraculous gift!"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/review_03.png" alt="Great choice for my family"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/review_04.png" alt="I stopped snoring!"></div>
+                            <div class="swiper-slide"><img src="/images/ces/achieve/review_05.png" alt="I bought one more!"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div><!--/voice_slide_wrap-->                               
+            </section>
+            <section id="contact_us">
+                <div><img src="/images/ces/contact/contact_01.jpg" alt="Now, taking responsibility for our health beyond sleep - What’s Next?"></div>
+                <div class="contact_info" id="contact">
+                    <h2><img src="/images/ces/contact/contact_tit.png" alt="Contact Us"></h2>
+
+                    <ul>
+                        <li>
+                            <b><img src="/images/ces/contact/ico_email.png" alt="email"></b>
+                            <span>cs@tenminds.com</span>
+                        </li>
+<!--                         <li>
+                            <b><img src="/images/ces/contact/ico_phone.png" alt="phone"></b>
+                            <span>+82-2-6328-6232</span>
+                        </li> -->
+                        <li>
+                            <b><img src="/images/ces/contact/ico_position.png" alt="address"></b>
+                            <span>72 Hoenamu-ro, Youngsan-gu,<br>
+                                Seoul, Republic of Korea 04346</span>
+                        </li>
+                    </ul>
+
+                    <div class="contact_sns">
+                        <a href="https://www.instagram.com/motionpillow_global/" target="_blank"><img src="/images/ces/contact/insta.png" alt="go to instagram"></a>
+                        <a href="https://www.youtube.com/channel/UCRZllkmBQ08ZX4SCFjwlxJw" target="_blank"><img src="/images/ces/contact/yt.png" alt="go to youtube"></a>
+                    </div>
+                </div>                
+            </section>
+            <section class="press_release" id="pressRelease">
+                <h2>Download Press Release</h2>
+                <h3>Word files and images</h3>
+                <p>
+                    <a href="https://drive.google.com/drive/folders/1TxhBVsgNxG2--t4GNHJk4luwacc7YHW2?usp=sharing" target="_blank">English version</a>
+                    <a href="https://drive.google.com/drive/folders/1SB-jDc-FlIwBJic-_tteYwaSUoxr9Ohe?usp=sharing" target="_blank">한국어 버전</a>
+                </p>
+            </section>
+            <footer>
+                <!-- <img src="/images/ces/footer_img.png" alt=""> -->
+                <h2><img src="/images/ces/logo_bot.png" alt="motion pillow - motion system & motion pillow"></h2>
+                <p>10minds is a company that is engaged in the smart <br>health & beauty industry, specialized in designing products <br>to provide relaxation in the user's life</p>
+                <div>Copyright@10minds All Right Reserved.</div>
+            </footer>
+        </div><!--inner-->
+
+        <img class="smart_home" src="/images/ces/smart_home.png" alt="">
+        <img class="ces_best_innov" id="myImage" src="/images/ces/ces_best_2024.png" alt="">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+                var $bestInnovMark = document.querySelector('.ces_best_innov');
+                var isScrolling;
+
+                window.onscroll = function() {
+                    $bestInnovMark.classList.remove('active');
+                    window.clearTimeout( isScrolling );
+                    isScrolling = setTimeout(function() {
+                        $bestInnovMark.classList.add('active');
+                    }, 500);
+
+                };     
+            });   
+        </script>
+
+    </div><!--mp_ces_wrap-->
+
+    <div class="menu_cont">
+        <nav>
+            <ul class="anchors">
+                <li><a href="#story" class="anchor">Story</a></li>
+                <li><a href="#motion_system" class="anchor">Products</a></li>
+                <li><a href="#key_feature" class="anchor">Key Features</a></li>
+                <li><a href="#app_info" class="anchor">App</a></li>
+                <li><a href="#contact" class="anchor">Contact Us</a></li>
+                <li>
+                	<a href="#pressRelease" class="anchor">Download Press Release</a>
+                	<p class="press_ver">
+                		<a href="https://drive.google.com/drive/folders/1TxhBVsgNxG2--t4GNHJk4luwacc7YHW2?usp=sharing" target="_blank">English version</a>
+                		<a href="https://drive.google.com/drive/folders/1SB-jDc-FlIwBJic-_tteYwaSUoxr9Ohe?usp=sharing" target="_blank">한국어 버전</a>
+                	</p>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="wins"><img src="/images/ces/winners.png" alt=""></div>
+        <p>Copyright@10minds All right reserved.</p>
+        <div class="sns">
+            <a href="https://www.instagram.com/motionpillow_global/" target="_blank"><img src="/images/ces/ico_insta.png" alt="go to instagram"></a>
+            <a href="https://www.youtube.com/channel/UCRZllkmBQ08ZX4SCFjwlxJw" target="_blank"><img src="/images/ces/ico_yt.png" alt="go to youtube"></a>
+        </div>
+
+    </div><!--/menu_cont-->
+
+</body>
+</html>    
